@@ -82,7 +82,9 @@ class MyFormState extends State<MyForm>{
 
 
           ElevatedButton(onPressed: (){
-            if(formKey.currentState!.validate()){}
+            if(formKey.currentState!.validate()){
+              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Processing Data')));
+            }
           }, child: Text('Click'))
         ],
       ),
